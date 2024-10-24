@@ -13,11 +13,11 @@
         "sql-bricks",
         "query"
     ],
-    "author": "Tamar Zilbar",
+    "author": "Christian Braghette",
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://github.com/tamarzil/mysql-bricks.git"
+        "url": "https://github.com/christianbraghette/mysql-bricks/tree/npm"
     },
     "dependencies": {
         "sql-bricks": "^3.0.0"
