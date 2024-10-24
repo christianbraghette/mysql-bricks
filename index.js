@@ -101,6 +101,18 @@ const defineClauseFunction = function() {
 // '{{#if _insertIgnore}}IGNORE{{/if}}'
 mysqlBricks.insert.defineClause('ignore', defineClauseFunction, { after: 'insert' });
 
-
+// REGEXP operator
+mysqlBricks.regexp = function regexp(col, val) {
+    return new Regexp(col, val);
+};
+class Regexp extends mysqlBricks.Binary {
+    constructor(col, val) {
+        super('REGEXP', col, val);
+    }
+    clone() {
+        return new Regexp(this.col, this.val);
+    }
+}
+mysqlBricks.Regexp = Regexp;
 
 module.exports = mysqlBricks;

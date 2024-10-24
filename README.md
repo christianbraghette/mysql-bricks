@@ -102,6 +102,14 @@ UPDATE main.some_table SET grade = 90 WHERE grade > 90 ORDER BY age desc LIMIT 1
 */
 ```
 
+#### REGEXP (WHERE)
+```javascript
+let query = sql.select().from('main.some_table').where(regexp('name', '^D')).limit(100).offset(50).toString();
+/*                
+SELECT * FROM main.some_table WHERE name REGEXP '^D' LIMIT 100 OFFSET 50
+*/
+```
+
 ## Contribute
 
 Supported MySQL specific functions are the most common ones as used by me, but if you find something missing - feel free to open an issue, or better yet - a pull request!
